@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "480720142342",
+    "firebase_url": "https://innogeeks-11fbe.firebaseio.com",
+    "project_id": "innogeeks-11fbe",
+    "storage_bucket": "innogeeks-11fbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480720142342:android:790352a51175298fb30387",
+        "android_client_info": {
+          "package_name": "com.example.ecomm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480720142342-9pcp96tl9julcbng8eg115j107djouub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecomm",
+            "certificate_hash": "079bf647b5b43f1404ed257cf1ae35bcefba04c1"
+          }
+        },
+        {
+          "client_id": "480720142342-9o8v1quvprdu910gc8vk7b8dtrt7eg7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS5nf0vufova1n0JLesm2zb9SXK22e740"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480720142342-9o8v1quvprdu910gc8vk7b8dtrt7eg7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
