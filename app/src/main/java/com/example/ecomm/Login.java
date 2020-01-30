@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
     Button merchant,customer;
-    TextView newUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         merchant=findViewById(R.id.merchant);
         customer=findViewById(R.id.customer);
-        newUser=findViewById(R.id.newUser);
+
         merchant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,11 +36,7 @@ public class Login extends AppCompatActivity {
 
             }
         });
-          newUser.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View v) {
 
-              }
-          });
+
     }
 }
