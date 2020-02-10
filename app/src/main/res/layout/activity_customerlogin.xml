@@ -73,6 +73,6 @@
         android:layout_alignParentRight="true"
         android:layout_margin="20dp"
         android:textSize="15sp"
-        android:id="@+id/newUser"
+        android:id="@+id/newuser"
         android:clickable="true"/>
 </RelativeLayout>

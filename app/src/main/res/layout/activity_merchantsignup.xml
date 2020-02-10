@@ -26,6 +26,19 @@
 
 
 
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="  Name "
+                android:inputType="text"
+                android:textColorHint="#545858"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:shadowColor="#01B4B3"
+                android:layout_margin="15dp"
+                android:textColor="#01B4B3"
+                android:padding="10dp"
+                android:id="@+id/name"/>
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -36,18 +49,8 @@
                 android:shadowColor="#01B4B3"
                 android:layout_margin="15dp"
                 android:textColor="#01B4B3"
-                android:padding="10dp"/>
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="  Username "
-                android:inputType="text"
-                android:textColorHint="#545858"
-                android:drawableLeft="@drawable/ic_person_black_24dp"
-                android:shadowColor="#01B4B3"
-                android:layout_margin="15dp"
-                android:textColor="#01B4B3"
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:id="@+id/email"/>
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -58,7 +61,8 @@
                 android:shadowColor="#01B4B3"
                 android:layout_margin="15dp"
                 android:textColor="#01B4B3"
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:id="@+id/store"/>
 
 
             <EditText
@@ -71,8 +75,10 @@
                 android:shadowColor="#01B4B3"
                 android:layout_margin="15dp"
                 android:textColor="#01B4B3"
-                android:padding="10dp"/>
-            <EditText
+                android:padding="10dp"
+                android:id="@+id/phn"/>
+
+              <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="  Password "
@@ -82,18 +88,44 @@
                 android:drawableLeft="@drawable/ic_lock_black_24dp"
                 android:shadowColor="#01B4B3"
                 android:textColor="#01B4B3"
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:id="@+id/pass"/>
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="  Enter OTP "
+                android:inputType="phone"
+                android:textColorHint="#545858"
+                android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+                android:shadowColor="#01B4B3"
 
+                android:textColor="#01B4B3"
+                android:visibility="invisible"
+                android:id="@+id/otp"/>
 
             <Button
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="20dp"
+
                 android:background="@color/basic"
                 android:text="Register"
                 android:textStyle="bold"
+                android:id="@+id/submit"
                 />
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:background="@color/basic"
+                android:text="Verify OTP"
+                android:textStyle="bold"
+                android:id="@+id/verify"
+                />
+
+
+
 
 
 

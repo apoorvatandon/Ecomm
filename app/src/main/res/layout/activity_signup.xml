@@ -7,86 +7,120 @@
     tools:context=".Signup"
     android:background="@drawable/bg">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:src="@drawable/logom"
+
+            />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerInParent="true">
+            android:layout_margin="15dp"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:hint="  Email "
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:shadowColor="#01B4B3"
+            android:textColor="#01B4B3"
+            android:textColorHint="#545858" />
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/logom"
-                android:layout_gravity="center_horizontal"
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:hint="  Name "
+            android:inputType="text"
+            android:padding="10dp"
+            android:shadowColor="#01B4B3"
+            android:textColor="#01B4B3"
+            android:textColorHint="#545858" />
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="  Address "
+            android:inputType="text"
+            android:padding="10dp"
+            android:shadowColor="#01B4B3"
+            android:textColor="#01B4B3"
+            android:textColorHint="#545858" />
 
+            <EditText
+            android:id="@+id/phone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+            android:hint="  Phone no. "
+            android:inputType="phone"
+            android:padding="10dp"
+            android:shadowColor="#01B4B3"
+            android:textColor="#01B4B3"
+            android:textColorHint="#545858"
                 />
 
 
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:hint="  Password "
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:shadowColor="#01B4B3"
+            android:textColor="#01B4B3"
+            android:textColorHint="#545858" />
 
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="  Email "
-                android:inputType="textEmailAddress"
-                android:textColorHint="#545858"
-                android:drawableLeft="@drawable/ic_email_black_24dp"
-                android:shadowColor="#01B4B3"
-                android:layout_margin="15dp"
-                android:textColor="#01B4B3"
-                android:padding="10dp"/>
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="  Username "
-                android:inputType="text"
-                android:textColorHint="#545858"
-                android:drawableLeft="@drawable/ic_person_black_24dp"
-                android:shadowColor="#01B4B3"
-                android:layout_margin="15dp"
-                android:textColor="#01B4B3"
-                android:padding="10dp"/>
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="  Phone no. "
-                android:inputType="phone"
-                android:textColorHint="#545858"
-                android:drawableLeft="@drawable/ic_local_phone_black_24dp"
-                android:shadowColor="#01B4B3"
-                android:layout_margin="15dp"
-                android:textColor="#01B4B3"
-                android:padding="10dp"/>
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="  Password "
-                android:inputType="textPassword"
-                android:layout_margin="15dp"
-                android:textColorHint="#545858"
-                android:drawableLeft="@drawable/ic_lock_black_24dp"
-                android:shadowColor="#01B4B3"
-                android:textColor="#01B4B3"
-                android:padding="10dp"/>
+        <EditText
+            android:id="@+id/vericode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:hint="  OTP "
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:shadowColor="#01B4B3"
+            android:textColor="#01B4B3"
+            android:textColorHint="#545858"
+            android:visibility="invisible" />
 
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="20dp"
-                android:background="@color/basic"
-                android:text="Register"
-                android:textStyle="bold"
-                />
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/basic"
+            android:text="Register"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/verify"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/basic"
+            android:text="Verify OTP"
+            android:textStyle="bold" />
 
 
+    </LinearLayout>
 
 
-
-
-
-        </LinearLayout>
-
-
-    </RelativeLayout>
+</RelativeLayout>
