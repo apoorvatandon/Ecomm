@@ -1,6 +1,7 @@
 package com.example.ecomm;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -63,14 +64,7 @@ public class Signup extends AppCompatActivity {
                 calling(phn);  // OnVerificationStateChangedCallbacks
             }
         });
-        verify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String code=vericode.getText().toString();
-                PhoneAuthCredential credential=PhoneAuthProvider.getCredential(mveriid,code);
-                signInWithPhoneAuthCredential(credential);
-            }
-        });
+
 
        mcallback=new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
            @Override
@@ -91,9 +85,15 @@ public class Signup extends AppCompatActivity {
                mveriid = s;
                resend = forceResendingToken;
                Toast.makeText(Signup.this,"code sent",Toast.LENGTH_SHORT).show();
+              Intent i=new Intent(Signup.this,otp.class);
+              startActivityForResult(i,3);
+
+
            }
 
+
        };
+
     }
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         auth.signInWithCredential(credential)
@@ -118,4 +118,14 @@ public class Signup extends AppCompatActivity {
         PhoneAuthProvider.getInstance().verifyPhoneNumber( call, 60, TimeUnit.SECONDS, this, mcallback);
     }
 
-    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==3) {
+            if (resultCode == RESULT_OK) {
+                PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mveriid, data.getStringExtra("otp"));
+                signInWithPhoneAuthCredential(credential);
+
+
+            }
+        }}}
