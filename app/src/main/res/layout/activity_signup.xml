@@ -10,7 +10,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
 
         <ImageView
             android:layout_width="150dp"
@@ -87,37 +88,19 @@
             android:textColor="#01B4B3"
             android:textColorHint="#545858" />
 
-        <EditText
-            android:id="@+id/vericode"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:drawableLeft="@drawable/ic_lock_black_24dp"
-            android:hint="  OTP "
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:shadowColor="#01B4B3"
-            android:textColor="#01B4B3"
-            android:textColorHint="#545858"
-            android:visibility="invisible" />
+
 
 
         <Button
             android:id="@+id/submit"
             android:layout_width="150dp"
+            android:layout_margin="10dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@color/basic"
             android:text="Register"
             android:textStyle="bold" />
-        <Button
-            android:id="@+id/verify"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@color/basic"
-            android:text="Verify OTP"
-            android:textStyle="bold" />
+
 
 
     </LinearLayout>
