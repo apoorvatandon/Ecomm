@@ -21,6 +21,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.security.AuthProvider;
 import java.util.concurrent.TimeUnit;
@@ -31,7 +33,7 @@ public class Signup extends AppCompatActivity {
     FirebaseAuth auth;
      PhoneAuthProvider.OnVerificationStateChangedCallbacks mcallback;
      PhoneAuthProvider.ForceResendingToken resend;
-
+     DatabaseReference ref;
 
     String mveriid;
 
@@ -50,9 +52,6 @@ public class Signup extends AppCompatActivity {
         vericode=findViewById(R.id.vericode);
         verify=findViewById(R.id.verify);
 
-        String eml = email.getText().toString().trim();
-        String nam = name.getText().toString().trim();
-        String pas = pass.getText().toString();
 
         auth=FirebaseAuth.getInstance();
         submit.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +100,18 @@ public class Signup extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            Toast.makeText(Signup.this,"verification done..accouont made",Toast.LENGTH_SHORT).show();
+                            ref= FirebaseDatabase.getInstance().getReference().child("member");
+                            member mem;
+                            mem=new member();
+                            String eml = email.getText().toString().trim();
+                            String nam = name.getText().toString().trim();
+                            String pas = pass.getText().toString();
+                            mem.setEmail(eml);
+                            mem.setName(nam);
+                            mem.setPass(pas);
+                            mem.setPhone(Integer.parseInt(phone.getText().toString()));
+
                             Intent i=new Intent(Signup.this,itemdisplaypage.class);
                             startActivity(i);
 
